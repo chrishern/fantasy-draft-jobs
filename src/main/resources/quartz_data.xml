@@ -28,7 +28,7 @@
 				<name>PlayerDataJob</name>
 				<job-name>PlayerDataJob</job-name>
 				<repeat-count>-1</repeat-count> <!-- repeat forever -->
-				<repeat-interval>10000</repeat-interval>  <!-- every 10 seconds -->
+				<repeat-interval>86400000</repeat-interval>  <!-- every 24 hours -->
 			</simple>
 		</trigger>
 	</schedule>
