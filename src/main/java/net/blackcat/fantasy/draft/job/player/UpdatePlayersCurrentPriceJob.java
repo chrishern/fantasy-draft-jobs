@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class PlayerDataJob implements Job{
+public class UpdatePlayersCurrentPriceJob implements Job {
 
 	@Override
     public void execute(final JobExecutionContext ctx) throws JobExecutionException {

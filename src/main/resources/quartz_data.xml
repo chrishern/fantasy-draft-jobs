@@ -20,13 +20,13 @@
 
 	<schedule>
 		<job>
-			<name>PlayerDataJob</name>
-			<job-class>net.blackcat.fantasy.draft.job.player.PlayerDataJob</job-class>
+			<name>UpdatePlayersCurrentPriceJob</name>
+			<job-class>net.blackcat.fantasy.draft.job.player.UpdatePlayersCurrentPriceJob</job-class>
 		</job>
 		<trigger>
 			<cron>
-				<name>PlayerDataJob</name>
-				<job-name>PlayerDataJob</job-name>
+				<name>UpdatePlayersCurrentPriceJobTrigger</name>
+				<job-name>UpdatePlayersCurrentPriceJob</job-name>
 				<cron-expression>0 0 20 ? * *</cron-expression>
 			</cron>
 		</trigger>
