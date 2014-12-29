@@ -24,12 +24,11 @@
 			<job-class>net.blackcat.fantasy.draft.job.player.PlayerDataJob</job-class>
 		</job>
 		<trigger>
-			<simple>
+			<cron>
 				<name>PlayerDataJob</name>
 				<job-name>PlayerDataJob</job-name>
-				<repeat-count>-1</repeat-count> <!-- repeat forever -->
-				<repeat-interval>86400000</repeat-interval>  <!-- every 24 hours -->
-			</simple>
+				<cron-expression>0 0 20 ? * *</cron-expression>
+			</cron>
 		</trigger>
 	</schedule>
 
