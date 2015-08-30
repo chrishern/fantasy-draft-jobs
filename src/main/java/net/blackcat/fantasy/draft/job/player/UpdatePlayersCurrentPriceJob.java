@@ -5,9 +5,6 @@ package net.blackcat.fantasy.draft.job.player;
 
 import java.util.Date;
 
-import net.blackcat.fantasy.draft.fpl.integration.facade.PlayerDataFacade;
-import net.blackcat.fantasy.draft.job.spring.ApplicationContextProvider;
-
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -25,7 +22,7 @@ public class UpdatePlayersCurrentPriceJob implements Job {
 
         System.out.println(new Date().toString() + " - Executing Update Players Current Price Job");
         
-        ApplicationContextProvider.getApplicationContext().getBean(PlayerDataFacade.class).updatePlayersCurrentPrice();
+//        ApplicationContextProvider.getApplicationContext().getBean(PlayerDataFacade.class).updatePlayersCurrentPrice();
         
         System.out.println(new Date().toString() + " - Finished Executing Update Players Current Price Job");
 

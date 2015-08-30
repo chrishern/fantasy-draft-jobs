@@ -23,11 +23,23 @@
 			<name>UpdatePlayersCurrentPriceJob</name>
 			<job-class>net.blackcat.fantasy.draft.job.player.UpdatePlayersCurrentPriceJob</job-class>
 		</job>
+		<job>
+			<name>UpdatePlayersStatisticsJob</name>
+			<job-class>net.blackcat.fantasy.draft.job.player.UpdatePlayersStatisticsJob</job-class>
+		</job>
 		<trigger>
 			<cron>
 				<name>UpdatePlayersCurrentPriceJobTrigger</name>
 				<job-name>UpdatePlayersCurrentPriceJob</job-name>
 				<cron-expression>0 0 20 ? * *</cron-expression>
+			</cron>
+		</trigger>
+		<trigger>
+			<cron>
+				<name>UpdatePlayersStatisticsJobTrigger</name>
+				<job-name>UpdatePlayersStatisticsJob</job-name>
+				<!-- Run 9am every Tuesday -->
+				<cron-expression>0 0 9 ? * TUE *</cron-expression>
 			</cron>
 		</trigger>
 	</schedule>
