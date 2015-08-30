@@ -5,6 +5,10 @@ package net.blackcat.fantasy.draft.job.player;
 
 import java.util.Date;
 
+import net.blackcat.fantasy.draft.fpl.integration.facade.PlayerDataFacade;
+import net.blackcat.fantasy.draft.integration.exception.FantasyDraftIntegrationException;
+import net.blackcat.fantasy.draft.job.spring.ApplicationContextProvider;
+
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -20,11 +24,15 @@ public class UpdatePlayersCurrentPriceJob implements Job {
 	@Override
     public void execute(final JobExecutionContext ctx) throws JobExecutionException {
 
-        System.out.println(new Date().toString() + " - Executing Update Players Current Price Job");
+        System.out.println(new Date().toString() + " - Executing Update Players Price Data Job");
         
-//        ApplicationContextProvider.getApplicationContext().getBean(PlayerDataFacade.class).updatePlayersCurrentPrice();
+        try {
+			ApplicationContextProvider.getApplicationContext().getBean(PlayerDataFacade.class).updateExistingPlayerPriceData();
+		} catch (final FantasyDraftIntegrationException e) {
+			System.out.println("Error when executing Update Players Price Data Job " + e);
+		}
         
-        System.out.println(new Date().toString() + " - Finished Executing Update Players Current Price Job");
+        System.out.println(new Date().toString() + " - Finished Executing Update Players Price Data Job");
 
     }
 }

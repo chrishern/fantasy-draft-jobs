@@ -31,6 +31,7 @@
 			<cron>
 				<name>UpdatePlayersCurrentPriceJobTrigger</name>
 				<job-name>UpdatePlayersCurrentPriceJob</job-name>
+				<!-- Run every day at 8pm -->
 				<cron-expression>0 0 20 ? * *</cron-expression>
 			</cron>
 		</trigger>
