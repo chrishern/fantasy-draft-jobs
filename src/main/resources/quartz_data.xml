@@ -32,7 +32,8 @@
 				<name>UpdatePlayersCurrentPriceJobTrigger</name>
 				<job-name>UpdatePlayersCurrentPriceJob</job-name>
 				<!-- Run every day at 8pm -->
-				<cron-expression>0 0 20 ? * *</cron-expression>
+				<!-- <cron-expression>0 0 20 ? * *</cron-expression> -->
+				<cron-expression>0 0 22 ? * *</cron-expression>
 			</cron>
 		</trigger>
 		<trigger>
@@ -40,7 +41,8 @@
 				<name>UpdatePlayersStatisticsJobTrigger</name>
 				<job-name>UpdatePlayersStatisticsJob</job-name>
 				<!-- Run 9am every Tuesday -->
-				<cron-expression>0 0 9 ? * TUE *</cron-expression>
+				<!-- <cron-expression>0 0 9 ? * TUE *</cron-expression> -->
+				<cron-expression>0 0 23 ? * *</cron-expression>
 			</cron>
 		</trigger>
 	</schedule>
